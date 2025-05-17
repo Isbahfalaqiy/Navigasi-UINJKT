@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigator Kampus UIN Jakarta</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Navigasi Map<span>Uin Jakarta</span></a>
+      <div class="navbar-nav"></div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container">
+      <div id="controls">
+        <label for="start">Dari:</label>
+        <select id="start">
+          <option value="FST">FST</option>
+          <option value="FDIKOM">FDIKOM</option>
+          <option value="FITK">FITK</option>
+          <option value="FAH">FAH</option>
+          <option value="Rektorat">Rektorat</option>
+          <option value="Perpustakaan">Perpustakaan</option>
+          <option value="Masjid">Masjid</option>
+          <option value="PLT">PLT</option>
+          <option value="FISIP">FISIP</option>
+          <option value="PSIKOLOGI">PSIKOLOGI</option>
+          <option value="KEDOKTERAN">KEDOKTERAN</option>
+          <option value="PPG">PPG</option>
+        </select>
+
+        <label for="end">Ke:</label>
+        <select id="end">
+          <option value="FST">FST</option>
+          <option value="FDIKOM">FDIKOM</option>
+          <option value="FITK">FITK</option>
+          <option value="FAH">FAH</option>
+          <option value="Rektorat">Rektorat</option>
+          <option value="Perpustakaan">Perpustakaan</option>
+          <option value="Masjid">Masjid</option>
+          <option value="PLT">PLT</option>
+          <option value="FISIP">FISIP</option>
+          <option value="PSIKOLOGI">PSIKOLOGI</option>
+          <option value="KEDOKTERAN">KEDOKTERAN</option>
+          <option value="PPG">PPG</option>
+        </select>
+
+        <button onclick="findRoute()">Cari Rute</button>
+      </div>
+
+      <div id="map"></div>
+      <div id="info"></div>
+      <footer class="footer">Kelompok 8</footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

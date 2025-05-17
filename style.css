@@ -1,0 +1,163 @@
+:root {
+  --primary: #0171cc;
+  --accent: #3498db;
+  --accent-hover: #2980b9;
+  --bg: #f4f6f8;
+  --text: #333333;
+  --white: #fff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 120px auto 0;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-bottom: 2px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  margin-left: 10px;
+}
+
+/* Controls */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+#controls select,
+#controls button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+#controls button {
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Map */
+#map {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Info */
+#info {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 150px;
+    padding: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  #controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #controls select,
+  #controls button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  #info {
+    font-size: 0.9rem;
+  }
+}
+
+/* Leaflet Routing Styling */
+.leaflet-routing-container {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: #fff !important;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.leaflet-routing-alt {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.footer {
+  text-align: center;
+  padding: 10px;
+
+  color: var(--text);
+}
